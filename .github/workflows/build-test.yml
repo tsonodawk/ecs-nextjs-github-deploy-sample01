@@ -2,8 +2,9 @@ name: Build and Test on Push
 
 on:
   push:
-    branches-ignore:
+    branches:
       - "main"
+  pull_request:
 jobs:
   build-docker:
     runs-on: ubuntu-latest
