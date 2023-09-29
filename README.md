@@ -35,10 +35,35 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-## MEMO
+## Docker
 
 ```js
-docker build -t ecs-nextjs-sample01:1.0 .
+$ docker build -t ecs-nextjs-sample01:1.0 .
 
-docker run -p 3000:3000 ecs-nextjs-sample010:1.0
+$ docker run -p 3000:3000 ecs-nextjs-sample010:1.0
+```
+
+## Copilot Cli Memo
+
+```js
+$ export AWS_PROFILE=xxxxxx
+
+$ copilot app init
+→ ecs-nextjs01
+
+$ copilot env init
+
+// クラスターの作成
+$ copilot env deploy
+
+// サービスの設定
+$ copilot svc init
+
+// サービスのデプロイ
+$ copilot svc deploy
+
+
+// URL確認
+copilot svc show
+
 ```
